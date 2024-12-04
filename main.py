@@ -66,7 +66,7 @@ while True:
     drawer.draw(q[0], q[1], q[2], q[3], p[2])
     algo_points.append((convert_angle("filter", "map") * p[0], convert_angle("filter", "map") * p[1]))
     ref_points.append((convert_angle("ref_pos_lat", "map") * firstLine[indices["ref_pos_lat"]], convert_angle("ref_pos_lon", "map") * firstLine[indices["ref_pos_lon"]]))
-    gps_points.append((convert_angle("gps_lat", "map") * firstLine[indices["gps_lat"]], convert_angle("gps_lon", "map") * firstLine[indices["ref_pos_lon"]]))
+    gps_points.append((convert_angle("gps_lat", "map") * firstLine[indices["gps_lat"]], convert_angle("gps_lon", "map") * firstLine[indices["gps_lon"]]))
     v = kf.getv()
     algo_data["p"].append([convert_angle("filter", "graph") * p[0], convert_angle("filter", "graph") * p[1], p[2]])
     algo_data["v"].append(v)
